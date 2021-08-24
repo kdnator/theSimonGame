@@ -23,7 +23,7 @@ $(".btn").click(function(){
   blip(clickColour);
   if(check==false){
     $("body").addClass("game-over");
-    var audio = new Audio("sounds/wrong.mp3");
+    var audio = new Audio("wrong.mp3");
     audio.play();
     setTimeout(function(){$("body").removeClass("game-over");}, 200);
   }
@@ -45,7 +45,7 @@ $(".btn").click(function(){
     $("body").addClass("game-over");
     setTimeout(function(){$("body").removeClass("game-over")},200);
     gamepattern = [];
-    audio = new Audio("sounds/wrong.mp3");
+    audio = new Audio("wrong.mp3");
     audio.play();
     check = false;
   }
@@ -57,7 +57,7 @@ $(".btn").click(function(){
 function blip(choosenColour){
   $("#" + choosenColour).addClass("pressed");
   setTimeout(function(){$("#" + choosenColour).removeClass("pressed");}, 200);
-  var audio = new Audio("sounds/" + choosenColour + ".mp3");
+  var audio = new Audio(choosenColour + ".mp3");
   audio.play();
 }
 
